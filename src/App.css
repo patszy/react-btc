@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -7,32 +11,68 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+  background-image: url(./bitcoin.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  animation: rotateItem 10s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  margin: 30px;
+  padding: 15px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.crypto-list{
+  padding: 0;
+  list-style: none;
+  width: 400px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.crypto-list li{
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.crypto-list li span{
+  margin: 0px 10px;
+}
+
+.crypto-list li span:nth-child(2){
+  font-weight: normal;
+
+}
+
+.blue{
+  color: rgb(0, 0, 255);
+}
+
+.green{
+  color: rgb(0, 196, 0);
+}
+
+.red{
+  color: rgb(196, 0, 0);
+}
+
+@keyframes rotateItem {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
